@@ -23,7 +23,7 @@ buildscript {
     }
     dependencies {
         classpath(files("libs/prism-gradle-plugin-0.1.0.jar"))
-        classpath("net.fabricmc:fabric-loom:1.9.2")
+        classpath("net.fabricmc:fabric-loom:1.15.5")
         classpath("net.neoforged:moddev-gradle:2.0.141")
         classpath("me.modmuss50:mod-publish-plugin:1.1.0")
     }
@@ -33,7 +33,7 @@ apply(plugin = "dev.prism.settings")
 
 rootProject.name = "my-mod"
 
-extensions.configure<dev.prism.gradle.dsl.PrismSettingsExtension>("prism") {
+extensions.configure<PrismSettingsExtension>("prism") {
     version("1.20.1") {
         common()
         fabric()
