@@ -33,7 +33,7 @@ apply(plugin = "dev.prism.settings")
 
 rootProject.name = "my-mod"
 
-extensions.configure<PrismSettingsExtension>("prism") {
+extensions.configure<dev.prism.gradle.dsl.PrismSettingsExtension>("prism") {
     version("1.20.1") {
         common()
         fabric()
