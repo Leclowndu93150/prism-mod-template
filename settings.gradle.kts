@@ -8,13 +8,28 @@ pluginManagement {
     }
 }
 
-plugins {
-    id("dev.prism.settings")
+buildscript {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url = uri("https://maven.fabricmc.net/") }
+        maven { url = uri("https://maven.neoforged.net/releases") }
+        maven { url = uri("https://repo.spongepowered.org/repository/maven-public/") }
+        maven { url = uri("https://libraries.minecraft.net/") }
+    }
+    dependencies {
+        classpath(files("libs/prism-gradle-plugin-0.1.0.jar"))
+        classpath("net.fabricmc:fabric-loom:1.9.2")
+        classpath("net.neoforged:moddev-gradle:2.0.141")
+        classpath("me.modmuss50:mod-publish-plugin:1.1.0")
+    }
 }
+
+apply(plugin = "dev.prism.settings")
 
 rootProject.name = "my-mod"
 
-prism {
+extensions.configure<dev.prism.gradle.dsl.PrismSettingsExtension>("prism") {
     version("1.20.1") {
         common()
         fabric()
