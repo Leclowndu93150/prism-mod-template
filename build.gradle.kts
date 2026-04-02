@@ -1,9 +1,11 @@
-apply(plugin = "dev.prism")
+plugins {
+    id("dev.prism")
+}
 
 group = "com.example"
 version = "1.0.0"
 
-extensions.configure<dev.prism.gradle.dsl.PrismExtension>("prism") {
+prism {
     metadata {
         modId = "mymod"
         name = "My Mod"
