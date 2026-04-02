@@ -10,5 +10,7 @@ build/
 out/
 
 runs/
+run/
+**/run/
 
 .DS_Store
