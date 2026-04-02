@@ -8,7 +8,7 @@ A multi-version Minecraft mod template powered by [Prism](https://github.com/Lec
 |-----------|------|---------|
 | 1.20.1 | Multi-loader | Fabric + Forge |
 | 1.21.1 | Single-loader | NeoForge |
-| 26.1 | Single-loader | NeoForge |
+| 26.1 | Single-loader | Fabric |
 
 ## Setup
 

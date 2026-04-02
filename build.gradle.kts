@@ -32,11 +32,11 @@ extensions.configure<dev.prism.gradle.dsl.PrismExtension>("prism") {
         }
     }
 
-    // Single-loader: just neoforge
+    // Single-loader: just fabric
     version("26.1") {
-        neoforge {
-            loaderVersion = "26.1.1.0-beta"
-            loaderVersionRange = "[4,)"
+        fabric {
+            loaderVersion = "0.18.6"
+            fabricApi("0.145.2+26.1.1")
         }
     }
 }
