@@ -1,0 +1,11 @@
+[
+  {
+    "modid": "mymod",
+    "name": "My Mod",
+    "description": "A Minecraft mod built with Prism.",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "authorList": ["YourName"],
+    "credits": ""
+  }
+]

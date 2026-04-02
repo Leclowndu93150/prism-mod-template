@@ -26,7 +26,7 @@ prism {
         }
     }
 
-    // Single-loader: just neoforge, all code in one folder
+    // Single-loader: just neoforge
     version("1.21.1") {
         neoforge {
             loaderVersion = "21.1.222"
@@ -39,6 +39,17 @@ prism {
         fabric {
             loaderVersion = "0.18.6"
             fabricApi("0.145.2+26.1.1")
+        }
+    }
+
+    // Legacy Forge 1.12.2
+    version("1.12.2") {
+        legacyForge {
+            mcVersion = "1.12.2"
+            forgeVersion = "14.23.5.2847"
+            mappingChannel = "stable"
+            mappingVersion = "39"
+            username = "Developer"
         }
     }
 }
