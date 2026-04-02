@@ -45,7 +45,7 @@ versions/
 
 ## Configuration
 
-Edit `build.gradle.kts` to change mod metadata, loader versions, and dependencies. See the [Prism documentation](https://leclowndu93150.github.io/Prism/) for the full DSL reference.
+Edit `build.gradle.kts` to change mod metadata, loader versions, and dependencies. See the [Prism documentation](https://prism.leclowndu93150.dev) for the full DSL reference.
 
 ## License
 
