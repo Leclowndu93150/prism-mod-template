@@ -12,6 +12,7 @@ extensions.configure<dev.prism.gradle.dsl.PrismExtension>("prism") {
         author("YourName")
     }
 
+    // Multi-loader: shared common + fabric + forge
     version("1.20.1") {
         fabric {
             loaderVersion = "0.18.6"
@@ -23,22 +24,16 @@ extensions.configure<dev.prism.gradle.dsl.PrismExtension>("prism") {
         }
     }
 
+    // Single-loader: just neoforge, all code in one folder
     version("1.21.1") {
-        fabric {
-            loaderVersion = "0.18.6"
-            fabricApi("0.116.9+1.21.1")
-        }
         neoforge {
             loaderVersion = "21.1.222"
             loaderVersionRange = "[4,)"
         }
     }
 
+    // Single-loader: just neoforge
     version("26.1") {
-        fabric {
-            loaderVersion = "0.18.6"
-            fabricApi("0.145.2+26.1.1")
-        }
         neoforge {
             loaderVersion = "26.1.1.0-beta"
             loaderVersionRange = "[4,)"

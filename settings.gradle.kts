@@ -34,19 +34,20 @@ apply(plugin = "dev.prism.settings")
 rootProject.name = "my-mod"
 
 extensions.configure<dev.prism.gradle.dsl.PrismSettingsExtension>("prism") {
+    // Multi-loader: common + fabric + forge
     version("1.20.1") {
         common()
         fabric()
         forge()
     }
+
+    // Single-loader: just neoforge, no common/loader split
     version("1.21.1") {
-        common()
-        fabric()
         neoforge()
     }
+
+    // Single-loader: just neoforge
     version("26.1") {
-        common()
-        fabric()
         neoforge()
     }
 }

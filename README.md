@@ -1,14 +1,14 @@
 # Prism Mod Template
 
-A multi-version, multi-loader Minecraft mod template powered by [Prism](https://github.com/Leclowndu93150/Prism).
+A multi-version Minecraft mod template powered by [Prism](https://github.com/Leclowndu93150/Prism).
 
 ## Versions included
 
-| Minecraft | Fabric | NeoForge | Forge |
-|-----------|--------|----------|-------|
-| 1.20.1    | Yes    |          | Yes   |
-| 1.21.1    | Yes    | Yes      |       |
-| 26.1      | Yes    | Yes      |       |
+| Minecraft | Mode | Loaders |
+|-----------|------|---------|
+| 1.20.1 | Multi-loader | Fabric + Forge |
+| 1.21.1 | Single-loader | NeoForge |
+| 26.1 | Single-loader | NeoForge |
 
 ## Setup
 
@@ -22,28 +22,25 @@ A multi-version, multi-loader Minecraft mod template powered by [Prism](https://
 
 ```
 versions/
-  1.20.1/
-    common/    shared code compiled against vanilla MC
-    fabric/    Fabric-specific code and resources
-    forge/     Forge-specific code and resources
-  1.21.1/
-    common/
-    fabric/
-    neoforge/
-  26.1/
-    common/
-    fabric/
-    neoforge/
+  1.20.1/                      multi-loader
+    common/src/main/java/      shared code (vanilla MC)
+    fabric/src/main/java/      Fabric-specific
+    forge/src/main/java/       Forge-specific
+  1.21.1/                      single-loader
+    src/main/java/             all code here
+    src/main/resources/
+  26.1/                        single-loader
+    src/main/java/
+    src/main/resources/
 ```
-
-Each version is independent. Common code within a version is shared across its loaders.
 
 ## Building
 
 ```bash
-./gradlew build                        # build everything
-./gradlew :1.21.1:fabric:build         # build specific target
-./gradlew :26.1:neoforge:runClient     # run specific target
+./gradlew build                    # build everything
+./gradlew :1.20.1:fabric:build     # multi-loader target
+./gradlew :1.21.1:build            # single-loader target
+./gradlew :1.21.1:runClient        # run single-loader
 ```
 
 ## Configuration
