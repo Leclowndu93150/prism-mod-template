@@ -25,9 +25,11 @@ prism {
         forge()
     }
 
-    // Single-loader: just neoforge
+    // Multi-loader: common + neoforge + lexforge (FG7 for modern Forge)
     version("1.21.1") {
+        common()
         neoforge()
+        lexForge()
     }
 
     // Single-loader: just fabric

@@ -26,11 +26,15 @@ prism {
         }
     }
 
-    // Single-loader: just neoforge
+    // Multi-loader: neoforge + lexforge (MinecraftForge via ForgeGradle 7)
     version("1.21.1") {
         neoforge {
             loaderVersion = "21.1.222"
             loaderVersionRange = "[4,)"
+        }
+        lexForge {
+            loaderVersion = "52.1.9"
+            loaderVersionRange = "[52,)"
         }
     }
 
